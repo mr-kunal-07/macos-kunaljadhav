@@ -1,10 +1,12 @@
 import { dockApps } from '#constants'
+import useWindowStore from '#store/Window'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import React, { useRef } from 'react'
 import { Tooltip } from 'react-tooltip'
 
 const Dock = () => {
+    const { focusWindow, closeWindow, openWindow, windows } = useWindowStore()
     const dockRef = useRef(null)
 
     useGSAP(() => {
@@ -57,7 +59,16 @@ const Dock = () => {
     }, [])
 
     const toggleApp = (app) => {
-        console.log("Open app:", app)
+        if (!app.canOpen) return
+
+        const window = windows[app.id]
+        if (!window) console.log(`Window not found for app:${app.id}`)
+
+        if (window.isOpen) {
+            closeWindow(app.id)
+        } else {
+            openWindow(app.id)
+        }
     }
 
     return (
@@ -66,6 +77,7 @@ const Dock = () => {
                 {dockApps.map(({ id, name, icon, canOpen }) => (
                     <div key={id} className='relative flex justify-center'>
                         <button
+                            id={`${id}-icon`}  // Add this ID for the genie effect
                             type='button'
                             className='dock-icon'
                             aria-label={name}
@@ -82,6 +94,11 @@ const Dock = () => {
                                 className={canOpen ? "" : "opacity-60"}
                             />
                         </button>
+
+                        {/* Optional: Add indicator dot for open windows */}
+                        {windows[id]?.isOpen && (
+                            <div className='absolute -bottom-1 w-1 h-1 bg-white rounded-full' />
+                        )}
                     </div>
                 ))}
 
