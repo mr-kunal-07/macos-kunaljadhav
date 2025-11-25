@@ -1,4 +1,5 @@
-import MacControl from '#components/macControl'
+
+import MacControl from '#components/MacControl.jsx'
 import { techStack } from '#constants'
 import windowWrapper from '#hoc/windowWrapper'
 import { Check, Flag } from 'lucide-react'
