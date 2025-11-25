@@ -1,4 +1,4 @@
-import MacControl from '#components/MacControl'
+import MacControl from '#components/MacControl.jsx'
 import { locations } from '#constants'
 import windowWrapper from '#hoc/windowWrapper'
 import useLocationStore from '#store/Location'

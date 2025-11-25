@@ -1,4 +1,4 @@
-import MacControl from '#components/macControl'
+import MacControl from '#components/MacControl.jsx'
 import windowWrapper from '#hoc/windowWrapper'
 import { ArrowLeft, ArrowRight, Download, ZoomIn, ZoomOut } from 'lucide-react'
 import React, { useState } from 'react'

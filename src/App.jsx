@@ -4,7 +4,6 @@ import { Draggable } from 'gsap/Draggable'
 import { Navbar, Welcome, Dock } from '#components'
 import Terminal from '#windows/Terminal'
 import Safari from '#windows/Safari'
-import Resume from '#windows/Resume'
 import ResumeWindow from '#windows/Resume'
 import FinderWrapper from '#windows/Finder'
 

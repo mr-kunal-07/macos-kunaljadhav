@@ -1,4 +1,4 @@
-import MacControl from '#components/macControl'
+import MacControl from '#components/MacControl.jsx'
 import { blogPosts } from '#constants'
 import windowWrapper from '#hoc/windowWrapper'
 import { ChevronLeft, ChevronRight, Copy, MoveRight, PanelLeft, Plug, Plus, Search, Share, ShieldHalf } from 'lucide-react'
