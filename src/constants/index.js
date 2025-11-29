@@ -1,7 +1,7 @@
 const navLinks = [
-    {id: 1, name: "Projects", type: "finder",},
-    {id: 3, name: "Contact", type: "contact",},
-    {id: 4,name: "Resume",type: "resume",},
+    { id: 1, name: "Projects", type: "finder", },
+    { id: 3, name: "Contact", type: "contact", },
+    { id: 4, name: "Resume", type: "resume", },
 ];
 
 const navIcons = [
@@ -65,32 +65,35 @@ const dockApps = [
 const blogPosts = [
     {
         id: 1,
-        date: "Sep 2, 2025",
-        title:
-            "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
-        image: "/images/blog1.png",
-        link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
+        date: "Jan, 2025 - Present",
+        title: "Junior Software Engineer at Oohpoint ",
+        image: "/exp/logo.webp",
+        link: "www.oohpoint.com",
     },
     {
         id: 2,
-        date: "Aug 28, 2025",
-        title: "The Ultimate Guide to Mastering Three.js for 3D Development",
-        image: "/images/blog2.png",
-        link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
+        date: "Jul 2024 ‑ Dec 2024",
+        title: "React Developer at Nestcraft Design",
+        image: "/exp/nestcraft.png",
+        link: "https://feelaxo.com/",
     },
     {
         id: 3,
-        date: "Aug 15, 2025",
-        title: "The Ultimate Guide to Mastering GSAP Animations",
-        image: "/images/blog3.png",
-        link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
+        date: "Jan 2024 ‑ Jun 2024",
+        title: "Freelance, Fullstack Developer at KODX",
+        image: "/exp/kodx.png",
+        link: "https://kodxmedia.site/",
     },
 ];
 
 const techStack = [
     {
+        category: "Languages",
+        items: ["JavaScript", "C++", "Python"],
+    },
+    {
         category: "Frontend",
-        items: ["React.js", "Next.js", "TypeScript"],
+        items: ["React.js", "Next.js", "Redux",],
     },
     {
         category: "Mobile",
@@ -102,7 +105,7 @@ const techStack = [
     },
     {
         category: "Backend",
-        items: ["Node.js", "Express", "NestJS", "Hono"],
+        items: ["Node.js", "Express", "NestJS"],
     },
     {
         category: "Database",
@@ -110,7 +113,7 @@ const techStack = [
     },
     {
         category: "Dev Tools",
-        items: ["Git", "GitHub", "Docker"],
+        items: ["Git", "GitHub", "Docker", "Postman"],
     },
 ];
 
@@ -120,28 +123,28 @@ const socials = [
         text: "Github",
         icon: "/icons/github.svg",
         bg: "#f4656b",
-        link: "https://github.com/JavaScript-Mastery-Pro",
+        link: "https://github.com/mr-kunal-07",
     },
     {
         id: 2,
         text: "Platform",
         icon: "/icons/atom.svg",
         bg: "#4bcb63",
-        link: "https://jsmastery.com/",
+        link: "https://kodxmedia.site/",
     },
     {
         id: 3,
         text: "Twitter/X",
         icon: "/icons/twitter.svg",
         bg: "#ff866b",
-        link: "https://x.com/jsmasterypro",
+        link: "https://x.com/Kunaljadhav02",
     },
     {
         id: 4,
         text: "LinkedIn",
         icon: "/icons/linkedin.svg",
         bg: "#05b6f6",
-        link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
+        link: "https://www.linkedin.com/in/kunaljadhav4295/",
     },
 ];
 
@@ -176,20 +179,20 @@ const photosLinks = [
 const gallery = [
     {
         id: 1,
-        img: "/images/gal1.png",
+        img: "/gal/kunal.png",
     },
-    {
-        id: 2,
-        img: "/images/gal2.png",
-    },
-    {
-        id: 3,
-        img: "/images/gal3.png",
-    },
-    {
-        id: 4,
-        img: "/images/gal4.png",
-    },
+    // {
+    //     id: 2,
+    //     img: "/images/gal2.png",
+    // },
+    // {
+    //     id: 3,
+    //     img: "/images/gal3.png",
+    // },
+    // {
+    //     id: 4,
+    //     img: "/images/gal4.png",
+    // },
 ];
 
 export {
@@ -415,7 +418,7 @@ const ABOUT_LOCATION = {
             subtitle: "Meet the Developer Behind the Code",
             image: "/images/adrian.jpg",
             description: [
-                "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
+                "Hey! I’m Kunal 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
                 "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
                 "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
                 "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",

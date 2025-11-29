@@ -40,13 +40,13 @@ const Safari = () => {
                     {blogPosts.map(({ id, title, date, link, image }) => (
                         <div key={id} className='blog-post'>
                             <div className='col-span-2'>
-                                <img src={image} alt={title} />
+                                <img src={image} alt={title} className='object-contain bg-amber-50' />
                             </div>
                             <div className='content'>
                                 <p>{date}</p>
                                 <h3>{title}</h3>
-                                <a href={link} target='_blank' rel='noopenernoreferrer'>
-                                    check out the full post <MoveRight className='icon-hover' />
+                                <a href={link} target='_blank' rel='noopenernoreferrer' className='flex items-center gap-2 '>
+                                    View My Work In Company <MoveRight className='pt-1' />
                                 </a>
                             </div>
                         </div>

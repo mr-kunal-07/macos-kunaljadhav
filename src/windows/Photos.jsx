@@ -2,7 +2,7 @@ import MacControl from '#components/MacControl'
 import { gallery, photosLinks } from '#constants'
 import windowWrapper from '#hoc/windowWrapper'
 import useWindowStore from '#store/Window'
-import { FileType, Mail, Search } from 'lucide-react'
+import { Mail, Search } from 'lucide-react'
 import React from 'react'
 
 const Photos = () => {
@@ -17,12 +17,15 @@ const Photos = () => {
                 <div className='w-full flex justify-end items-center gap-3 text-gray-50'>
                     <Mail className='icon' />
                     <Search className='icon' />
-
                 </div>
             </div>
-            <div className='flex w-full'>
+
+            {/* Responsive: column on mobile, row on desktop */}
+            <div className='flex flex-col md:flex-row w-full'>
+
+                {/* Sidebar */}
                 <div className='sidebar'>
-                    <h2>Photes</h2>
+                    <h2>Photos</h2>
 
                     <ul>
                         {photosLinks.map(({ id, icon, title }) => (
@@ -34,6 +37,7 @@ const Photos = () => {
                     </ul>
                 </div>
 
+                {/* Gallery */}
                 <div className='gallery'>
                     <ul>
                         {gallery.map(({ id, img }) => (
@@ -47,19 +51,14 @@ const Photos = () => {
                                         kind: 'file',
                                         fileType: "img",
                                         imageUrl: img,
-
-
                                     })
-
                                 }
                             >
                                 <img src={img} alt={`img-${id}`} />
                             </li>
                         ))}
                     </ul>
-
                 </div>
-
 
             </div>
         </>
@@ -67,5 +66,4 @@ const Photos = () => {
 }
 
 const PhotosWindow = windowWrapper(Photos, 'photos')
-
 export default PhotosWindow

@@ -264,34 +264,41 @@ body {
         }
       }
     }
-
     .gallery {
       @apply p-5;
+    }
 
-      ul {
-        @apply grid grid-cols-5 grid-rows-5 gap-2.5;
+    .gallery ul {
+      /* Mobile layout */
+      @apply grid grid-cols-2 gap-2;
 
-        li {
-          img {
-            @apply size-full object-cover rounded-lg;
-          }
+      /* Tablet */
+      @apply sm:grid-cols-3;
 
-          &:first-child {
-            @apply row-start-1 row-span-3 col-start-1 col-span-3;
-          }
+      /* Desktop – use your original 5×5 layout */
+      @apply md:grid-cols-5 md:grid-rows-5 md:gap-2.5;
+    }
 
-          &:nth-child(2) {
-            @apply row-start-1 row-span-3 col-start-4 col-span-2;
-          }
+    .gallery ul li img {
+      @apply w-full h-full object-cover rounded-lg;
+    }
 
-          &:nth-child(3) {
-            @apply row-start-4 row-span-2 col-start-3 col-span-3;
-          }
+    /* Restore the advanced layout only on desktop */
+    @media (min-width: 768px) {
+      .gallery ul li:first-child {
+        @apply row-start-1 row-span-3 col-start-1 col-span-3;
+      }
 
-          &:last-child {
-            @apply row-start-4 row-span-2 col-start-1 col-span-2;
-          }
-        }
+      .gallery ul li:nth-child(2) {
+        @apply row-start-1 row-span-3 col-start-4 col-span-2;
+      }
+
+      .gallery ul li:nth-child(3) {
+        @apply row-start-4 row-span-2 col-start-3 col-span-3;
+      }
+
+      .gallery ul li:last-child {
+        @apply row-start-4 row-span-2 col-start-1 col-span-2;
       }
     }
   }
